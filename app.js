@@ -21,7 +21,7 @@ function fibonacci(n) {
 app.get('/fib', async (req, res) => {
     const n = parseInt(req.query.n);
 
-    if (isNaN(n) || n <= 0 || ! Number.isInteger(n)) {
+    if (n <= 0 || ! Number.isInteger(n)) {
         return res.status(400).json({ status: 400, message: 'Bad request.'})
     }
     
